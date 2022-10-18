@@ -1,0 +1,34 @@
+#include<stdio.h>
+
+float pot(float a, int componente)
+{
+    float r;
+    if(componente ==0){
+        r=1.0;
+
+    }
+    else if(componente>0)
+    {
+        r=a*pot(a,componente -1);
+
+    }
+    else if(componente<0){
+        r= 1.0/a * pot(a,componente +1);
+    }
+    return r;
+}
+
+float pot (float a, int componente);
+
+int main(){
+    int a,componente;
+    float r;
+    printf("pon un numero:");
+    scanf("%d",&a);
+    printf("introduce el exponencial");
+    scanf("%d"componente);
+    r=pot (a,componente);
+    printf("el resultado es: %f",r);
+    return 1;
+}
+Footer
